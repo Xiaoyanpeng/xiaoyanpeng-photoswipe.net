@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片浏览器</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="styles.css" type="text/css" rel="stylesheet" />
+	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/photoswipe.min.js"></script>
+	
+	<script type="text/javascript">
+		(function(window, PhotoSwipe){
+			document.addEventListener('DOMContentLoaded', function(){
+				var options = {
+					enableMouseWheel: true ,//允许鼠标滚轮操作
+                    enableKeyboard: true ,// 允许键盘操作(左右箭头切换，Esc退出,Enter自动播放,空格键 显/隐标题栏/退出)
+                    allowUserZoom: true,//允许用户双击放大/移动方式查看图片  
+                    autoStartSlideshow: false  ,//当PhotoSwipe激活后,自动播放幻灯片
+                    allowRotationOnUserZoom: false  ,//只有iOS支持 允许用户在缩放/平移模式下 用手势旋转图像
+                    backButtonHideEnabled: true ,//按返回键隐藏相册幻灯片 主要是Android和Blackberry使用
+                    captionAndToolbarAutoHideDelay: 5000,//标题栏和工具栏自动隐藏的延迟时间  如果设为0则不会自动隐藏  
+                    captionAndToolbarFlipPosition: false ,//标题栏和工具栏切换位置
+                    captionAndToolbarHide: false  ,//隐藏标题栏和工具栏
+                    captionAndToolbarOpacity: 0.8  ,//标题栏和工具栏 的透明度(0-1)
+                    captionAndToolbarShowEmptyCaptions:true ,// 即使当前图片的标题是空,也显示标题栏
+                    doubleTapSpeed:300,// 双击的最大间隔
+                    doubleTapZoomLevel: 2.5  ,//双击时放大的倍数
+                    enableDrag: true ,//允许拖动上一张/下一张图片到当前界面
+                    fadeInSpeed:250  ,// 淡入效果元素的速度(持续时间)
+                    fadeOutSpeed: 250 ,//淡出效果元素的速度(持续时间)
+                    imageScaleMethod: 'fit',//图片缩放方法(模式). 可选值: "fit", "fitNoUpscale" 和 "zoom". "fit" 保证图像适应屏幕. "fitNoUpscale" 和 "fit"类似但是不会放大图片. "zoom"将图片全屏, 但有可能图片缩放不是等比例的 
+                    loop:true,// 相册是否自动循环
+                    margin: 20  ,//两张图之间的间隔
+                    maxUserZoom: 5.0,// 最大放大倍数
+                    minUserZoom: 0.5,// 图像最小的缩小倍数
+                    nextPreviousSlideSpeed: 0 ,//当点击上一张,下一张按钮后,延迟多少毫秒执行切换
+                    preventHide:false ,//阻止用户关闭 PhotoSwipe. 同时也会隐藏 工具栏上的"close"关闭按钮
+                    preventSlideshow: false ,//阻止自动播放模式. 同时也会隐藏工具栏里的播放按钮
+                    slideshowDelay: 3000,//自动播放模式下，多长时间播放下一张
+                    slideSpeed: 250,//图片滑进视图的时间 
+                    swipeThreshold: 50 ,//手指滑动多少像素才触发事件
+                    slideTimingFunction: 'ease-out', 
+                    zIndex: 1000,  
+                    enableUIWebViewRepositionTimeout: false ,//检查设备的方向是否改变 
+                    uiWebViewResetPositionDelay: 500,//定时检查设备的方向是否改变的时间
+                    preventDefaultTouchEvents:true  ,// 阻止默认的touch事件，比如页面滚动
+				},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+			}, false);
+		}(window, window.Code.PhotoSwipe));	
+	</script>
+</head>
+<body>
+	<div id="Header">
+		<a href=""><img src="images/codecomputerlovelogo.gif" width="230" height="48" alt="" /></a>
+	</div>
+	<div id="MainContent">
+		<ul id="Gallery" class="gallery">
+			<li><a href="images/full/001.jpg"><img src="images/thumb/001.jpg" alt="图片 1" /></a></li>
+			<li><a href="images/full/002.jpg"><img src="images/thumb/002.jpg" alt="图片 2" /></a></li>
+			<li><a href="images/full/003.jpg"><img src="images/thumb/003.jpg" alt="图片 3" /></a></li>
+			<li><a href="images/full/004.jpg"><img src="images/thumb/004.jpg" alt="图片 4" /></a></li>
+			<li><a href="images/full/005.jpg"><img src="images/thumb/005.jpg" alt="图片 5" /></a></li>
+			<li><a href="images/full/006.jpg"><img src="images/thumb/006.jpg" alt="图片 6" /></a></li>
+			<li><a href="images/full/007.jpg"><img src="images/thumb/007.jpg" alt="图片 7" /></a></li>
+			<li><a href="images/full/008.jpg"><img src="images/thumb/008.jpg" alt="图片 8" /></a></li>
+			<li><a href="images/full/009.jpg"><img src="images/thumb/009.jpg" alt="图片 9" /></a></li>
+			<li><a href="images/full/010.jpg"><img src="images/thumb/010.jpg" alt="图片 10" /></a></li>
+			<li><a href="images/full/011.jpg"><img src="images/thumb/011.jpg" alt="图片 11" /></a></li>
+			<li><a href="images/full/012.jpg"><img src="images/thumb/012.jpg" alt="图片 12" /></a></li>
+			<li><a href="images/full/013.jpg"><img src="images/thumb/013.jpg" alt="图片 13" /></a></li>
+			<li><a href="images/full/014.jpg"><img src="images/thumb/014.jpg" alt="图片 14" /></a></li>
+			<li><a href="images/full/015.jpg"><img src="images/thumb/015.jpg" alt="图片 15" /></a></li>
+			<li><a href="images/full/016.jpg"><img src="images/thumb/016.jpg" alt="图片 16" /></a></li>
+			<li><a href="images/full/017.jpg"><img src="images/thumb/017.jpg" alt="图片 17" /></a></li>
+			<li><a href="images/full/018.jpg"><img src="images/thumb/018.jpg" alt="图片 18" /></a></li>
+		</ul>
+	</div>	
+</body>
+</html>
